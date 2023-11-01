@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>215欢迎你！</title>
+  <link rel="stylesheet" href="../css/STYLE.css">
+</head>
+<body>
+<header>
+  <!--头部-->
+<div class="nav">
+  <a href="厚德载物.html">厚德载物</a>
+  <a href="#">成员集合</a>
+  <a href="宿舍文化.html">宿舍文化</a>
+  <a href="未来展望.html">未来展望</a>
+  <a href="">涩涩图片</a>
+</div>
+</header>
+<!--滚动视差-->
+<section class="section-item">
+  <div class="section-item__block" data-index="1"></div>
+  <div class="section-item__text">
+    <div class="text-title">「小宇（215最帅传说）」</div>
+    <div class="text-desc">行到水穷处，坐看云起时。</div>
+  </div>
+</section>
+<section class="section-item">
+  <div class="section-item__block" data-index="2"></div>
+  <div class="section-item__text">
+    <div class="text-title">「帅帅」</div>
+    <div class="text-desc">时代撕碎我破碎的心</div>
+  </div>
+</section>
+<section class="section-item">
+  <div class="section-item__block" data-index="3"></div>
+  <div class="section-item__text">
+    <div class="text-title">「江龙」</div>
+    <div class="text-desc">黄昏，不是白昼亦不是夜晚，是我努力却看不清你的脸。</div>
+  </div>
+</section>
+<section class="section-item">
+  <div class="section-item__block" data-index="4"></div>
+  <div class="section-item__text">
+    <div class="text-title">「智桐」</div>
+    <div class="text-desc">通往梦想的道路需要我们共同努力</div>
+  </div>
+</section>
+<section class="section-item">
+  <div class="section-item__block" data-index="5"></div>
+  <div class="section-item__text">
+    <div class="text-title">「小潘」</div>
+    <div class="text-desc">重新自我介绍一下吧爱哭脾气不好胆小强迫症喜欢自闭成绩差打游戏菜满口脏话矫情爱吃醋爱生气</div>
+  </div>
+</section>
+<section class="section-item">
+  <div class="section-item__block" data-index="6"></div>
+  <div class="section-item__text">
+    <div class="text-title">「家乐」</div>
+    <div class="text-desc">我是小宇的星怒</div>
+  </div>
+</section>
+<!--js部分-->
+<script>
+  const wh = window.innerHeight
+  const sectionBlock = Array.from(document.querySelectorAll('.section-item__block'))
+  window.addEventListener('scroll', function () {
+    sectionBlock.forEach(el => {
+      const { bottom, top, } = el.getBoundingClientRect()
+      if (bottom <= 0 || top >= wh) return
+      const y = document.documentElement.scrollTop * 0.28
+      el.style.backgroundPosition = `center -${y}px`
+    })
+  })
+</script>
+</body>
+</html>

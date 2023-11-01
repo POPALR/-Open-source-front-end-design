@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>215欢迎你！</title>
+  <link rel="stylesheet" href="../css/2.css">
+
+</head>
+
+<body>
+<header>
+  <!--头部-->
+  <div class="nav">
+    <a href="厚德载物.html">厚德载物</a>
+    <a href="成员集合.html">成员集合</a>
+    <a href="#">宿舍文化</a>
+    <a href="未来展望.html">未来展望</a>
+    <a href="">涩涩图片</a>
+  </div>
+</header>
+<!--插入视频与动态播放设置-->
+<div class="wrapper">
+  <input type="checkbox" />
+  <div class="video">
+    <video loop autoplay muted src="前端/背景/听见涛声.mp4"></video>
+  </div>
+  <div class="text">
+    <span data-text="215-听见涛声"></span>
+  </div>
+</div>
+<!--插入音乐-->
+<div class="music">
+  <audio src="前端/背景/xiaoqingge.mp3" autoplay loop></audio>
+  <button onclick="document.getElementsByTagName('audio')[0].play()">播放</button>
+  <button onclick="document.getElementsByTagName('audio')[0].pause()">暂停</button>
+</div>
+</body>
+</html>
